@@ -1,0 +1,43 @@
+.onboarding-new-project-form {
+  // .top-header {
+  //   display: grid;
+  //   grid-template-columns: auto 9rem;
+  //   gap: 0rem;
+  //   > div:nth-child(2) {
+  //     display: flex;
+  //     justify-content: flex-end;
+  //   }
+  // }
+  .template-selector {
+    .ant-radio-group {
+      display: grid;
+      grid-auto-flow: column;
+    }
+  }
+}
+
+.border-gradient {
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    right: -1px;
+    bottom: -2px;
+    background: var(--primary);
+    z-index: -1;
+    opacity: 0.6;
+  }
+}
+
+.ant-modal .ant-modal-content {
+  background: var(--modal-bg);
+}
+
+.modal-delete-project {
+  .ant-modal-content {
+    border-radius: 0;
+    @extend .border-gradient;
+  }
+}

@@ -1,0 +1,97 @@
+.container {
+  background: var(--black-500);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .brandLogo {
+    padding: 1.4rem 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      width: 100%;
+    }
+  }
+  .action {
+    font-size: 1.8rem;
+    padding: 0.7rem 0.1rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    position: relative;
+    color: var(--text-color);
+    display: flex;
+    user-select: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 0.625rem;
+
+    &.isActive,
+    &:hover {
+      opacity: 1;
+      color: var(--primary);
+      &::before {
+        display: block;
+      }
+    }
+    &.disabled {
+      cursor: not-allowed;
+    }
+    .icon {
+      width: 1.5rem;
+    }
+    span {
+      font-size: 0.8rem;
+      display: inline-block;
+      margin-top: 5px;
+      text-align: center;
+    }
+  }
+  .themeSwitch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem auto;
+    align-items: center;
+    border-radius: 50%;
+    height: 3rem;
+    width: 3rem;
+
+    > svg {
+      width: 1.4rem;
+      height: 1.4rem;
+    }
+  }
+  .clone {
+    font-size: 1.3rem;
+  }
+}
+.settingItem {
+  margin: 0 !important;
+  padding: 1rem 0;
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    [data-theme='light'] & {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    }
+  }
+  > div {
+    margin: 0 !important;
+  }
+}
+
+.resetAmount {
+  display: flex;
+  align-items: center;
+  padding: 0 0.5rem;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  &:hover {
+    background-color: rgba(177, 213, 221, 0.2);
+  }
+}
